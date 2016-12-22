@@ -1,7 +1,7 @@
 #!groovy
 jettyUrl = 'http://localhost:8081/'
 
-node ('docker-cloud') {
+node ('shared') {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
 
@@ -46,4 +46,4 @@ def runWithServer(body) {
     } finally {
         undeploy id
     }
-}*/
+}
