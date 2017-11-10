@@ -16,7 +16,7 @@ parallel(longerTests: {
 })
 
 stage name: 'Staging', concurrency: 1
-node ('docker-cloud') {
+node ('docker') {
     deploy 'staging'
 }
 
